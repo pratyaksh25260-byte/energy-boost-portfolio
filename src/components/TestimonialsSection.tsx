@@ -6,21 +6,21 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      quote: "Pratyaksh's understanding of the energy drink market and digital marketing fundamentals helped us successfully launch our natural energy drink product. His SEO strategy targeting health-conscious consumers delivered excellent results.",
-      author: "Fitness Brand Owner",
-      role: "Health & Wellness Industry",
+      quote: "Pratyaksh delivers practical digital marketing solutions.",
+      author: "Satisfied Client",
+      role: "Business Owner",
       rating: 5
     },
     {
-      quote: "Working with Pratyaksh on our sugar-free energy drinks campaign was excellent. His Google Ads expertise and data-driven approach helped us compete effectively against major brands like Monster Energy Drink.",
-      author: "Beverage Startup Founder",
-      role: "Beverage Industry",
+      quote: "Strong understanding of online marketing and google marketing.",
+      author: "Happy Customer",
+      role: "Startup Founder",
       rating: 5
     },
     {
-      quote: "Pratyaksh developed an outstanding content marketing strategy for our organic energy drinks brand. His knowledge of SEO and ability to create compelling content about healthy energy alternatives significantly improved our online visibility.",
-      author: "Health & Wellness Company Manager",
-      role: "Organic Products",
+      quote: "Professional, dedicated, and growth-focused digital marketer.",
+      author: "Business Partner",
+      role: "Marketing Director",
       rating: 5
     }
   ];
@@ -32,11 +32,11 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Testimonials</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mt-2 mb-4">
-            What Clients{" "}
+            What People{" "}
             <span className="gradient-text">Say</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Real feedback from brands I've helped grow in the energy drink industry
+            (More testimonials coming soon.)
           </p>
         </div>
 

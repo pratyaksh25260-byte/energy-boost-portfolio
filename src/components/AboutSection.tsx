@@ -4,8 +4,8 @@ const AboutSection = () => {
   const highlights = [
     { icon: MapPin, label: "Based in", value: "Narnaund, Haryana" },
     { icon: Briefcase, label: "Experience", value: "1+ Years" },
-    { icon: Target, label: "Focus", value: "Energy Drink Brands" },
-    { icon: Zap, label: "Specialty", value: "Growth Marketing" },
+    { icon: Target, label: "Focus", value: "Business Growth" },
+    { icon: Zap, label: "Specialty", value: "Digital Strategy" },
   ];
 
   return (
@@ -27,7 +27,7 @@ const AboutSection = () => {
                       <span className="font-display text-4xl font-bold text-primary-foreground">PD</span>
                     </div>
                     <h3 className="font-display text-xl font-bold text-secondary-foreground">Pratyaksh Dixit</h3>
-                    <p className="text-muted-foreground text-sm mt-1">Digital Marketing Expert</p>
+                    <p className="text-muted-foreground text-sm mt-1">Digital Marketing Professional</p>
                   </div>
                 </div>
               </div>
@@ -39,8 +39,8 @@ const AboutSection = () => {
                     <Zap className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <div className="font-bold text-foreground">Energy Drinks</div>
-                    <div className="text-xs text-muted-foreground">Industry Expert</div>
+                    <div className="font-bold text-foreground">Growth Expert</div>
+                    <div className="text-xs text-muted-foreground">Data-Driven</div>
                   </div>
                 </div>
               </div>
@@ -51,19 +51,19 @@ const AboutSection = () => {
           <div>
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">About Me</span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-              Transforming Marketing Challenges Into{" "}
-              <span className="gradient-text">Growth Opportunities</span>
+              What Is Digital Marketing{" "}
+              <span className="gradient-text">To Me?</span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm Pratyaksh Dixit, a passionate digital marketing professional based in Narnaund, Haryana. With hands-on experience in the dynamic world of digital marketing, I've specialized in helping beverage brands, particularly in the energy drink sector, connect with their target audiences through data-driven strategies and creative campaigns.
+                I'm Pratyaksh Dixit, a digital marketing professional with hands-on experience in planning, executing, and optimizing digital campaigns.
               </p>
               <p>
-                My expertise spans across promoting various product categories including healthy energy drinks, natural energy drinks, sugar-free energy drinks, and organic energy drinks. I understand the unique challenges of marketing in the competitive beverage industry and how to position brands effectively in a health-conscious market.
+                For me, what is digital marketing? It's not just ads or posts—it's about understanding people, platforms, and performance.
               </p>
               <p>
-                Whether it's optimizing content for search terms like "best energy drink" or crafting compelling campaigns for body fuel drink products, I bring dedication, creativity, and analytical thinking to every project.
+                Inspired by platforms like Google Digital Garage, I focus on ethical marketing, data analysis, and intent-based strategies to help brands grow online. I work with startups, small businesses, and individuals looking for growth through a digital marketing company-level strategy.
               </p>
             </div>
 

@@ -2,10 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Send, Mail, Phone, MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { Send, Mail, MapPin, Clock, CheckCircle2 } from "lucide-react";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -15,51 +14,16 @@ const ContactSection = () => {
     email: "",
     phone: "",
     company: "",
-    productType: "",
     services: [] as string[],
-    budget: "",
-    projectDetails: "",
-    referralSource: ""
+    projectDetails: ""
   });
 
-  const productTypes = [
-    "Energy Drink",
-    "Healthy Energy Drinks",
-    "Natural Energy Drinks",
-    "Organic Energy Drinks",
-    "Sugar Free Energy Drinks",
-    "Zero Calorie Energy Drinks",
-    "Energy Drink Powder",
-    "Body Fuel Drink",
-    "Boost Energy Drink",
-    "Other Beverage Product"
-  ];
-
   const services = [
+    "Digital Marketing Strategy",
     "SEO & Content Marketing",
     "Google Ads Management",
     "Meta Ads (Facebook & Instagram)",
-    "LinkedIn Marketing",
-    "Full Digital Marketing Strategy",
-    "Product Launch Campaign",
-    "Social Media Management"
-  ];
-
-  const budgetRanges = [
-    "Under ₹25,000",
-    "₹25,000 - ₹50,000",
-    "₹50,000 - ₹1,00,000",
-    "₹1,00,000 - ₹2,50,000",
-    "Above ₹2,50,000",
-    "Not Sure Yet"
-  ];
-
-  const referralSources = [
-    "Google Search",
-    "LinkedIn",
-    "Referral",
-    "Social Media",
-    "Other"
+    "LinkedIn Marketing"
   ];
 
   const handleServiceToggle = (service: string) => {
@@ -88,22 +52,17 @@ const ContactSection = () => {
       email: "",
       phone: "",
       company: "",
-      productType: "",
       services: [],
-      budget: "",
-      projectDetails: "",
-      referralSource: ""
+      projectDetails: ""
     });
     setIsSubmitting(false);
   };
 
   const specializedServices = [
-    { icon: "✓", title: "SEO for Energy Drink Brands", desc: "Rank higher for 'best energy drink' searches" },
-    { icon: "✓", title: "Content Marketing", desc: "Compelling content about natural energy drinks" },
-    { icon: "✓", title: "Paid Advertising", desc: "Google Ads and Meta Ads campaigns" },
-    { icon: "✓", title: "Social Media Marketing", desc: "Build engaged communities" },
-    { icon: "✓", title: "Product Launch Campaigns", desc: "Complete digital marketing strategy" },
-    { icon: "✓", title: "LinkedIn B2B Marketing", desc: "Connect with distributors and retailers" },
+    { icon: "✓", title: "Digital Marketing Strategy", desc: "Comprehensive plans for growth" },
+    { icon: "✓", title: "SEO & Content Marketing", desc: "Better Google rankings" },
+    { icon: "✓", title: "Google Ads & Meta Ads", desc: "Leads and sales campaigns" },
+    { icon: "✓", title: "LinkedIn Marketing", desc: "B2B growth and leads" },
   ];
 
   return (
@@ -113,11 +72,11 @@ const ContactSection = () => {
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-            Ready to{" "}
-            <span className="gradient-text">Energize Your Brand?</span>
+            Let's{" "}
+            <span className="gradient-text">Work Together</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Whether you're launching a new healthy energy drink or competing in the crowded market, I can help your brand stand out and grow.
+            Looking for a digital marketing professional who understands strategy, execution, and results?
           </p>
         </div>
 
@@ -127,7 +86,7 @@ const ContactSection = () => {
             {/* Specialized Services */}
             <div className="bg-secondary rounded-2xl p-6 border border-border">
               <h3 className="font-display text-lg font-bold text-secondary-foreground mb-4">
-                Specialized Services
+                Let's Discuss
               </h3>
               <div className="space-y-3">
                 {specializedServices.map((service) => (
@@ -161,6 +120,13 @@ const ContactSection = () => {
                   <span className="text-sm">Response within 24 hours</span>
                 </div>
               </div>
+            </div>
+
+            {/* Value Proposition */}
+            <div className="bg-card rounded-2xl p-6 border border-border">
+              <p className="text-center text-foreground font-medium">
+                👉 Let's grow your business with smart digital marketing.
+              </p>
             </div>
           </div>
 
@@ -217,35 +183,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label className="block text-sm font-medium text-card-foreground mb-2">Product Type</label>
-                  <Select value={formData.productType} onValueChange={(v) => setFormData({ ...formData, productType: v })}>
-                    <SelectTrigger className="bg-muted/50">
-                      <SelectValue placeholder="Select product type" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-card border-border">
-                      {productTypes.map((type) => (
-                        <SelectItem key={type} value={type}>{type}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-card-foreground mb-2">Project Budget</label>
-                  <Select value={formData.budget} onValueChange={(v) => setFormData({ ...formData, budget: v })}>
-                    <SelectTrigger className="bg-muted/50">
-                      <SelectValue placeholder="Select budget range" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-card border-border">
-                      {budgetRanges.map((range) => (
-                        <SelectItem key={range} value={range}>{range}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
               <div className="mb-4">
                 <label className="block text-sm font-medium text-card-foreground mb-3">Services Interested In *</label>
                 <div className="grid md:grid-cols-2 gap-2">
@@ -264,30 +201,16 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-6">
                 <label className="block text-sm font-medium text-card-foreground mb-2">Tell me about your project *</label>
                 <Textarea
                   required
                   value={formData.projectDetails}
                   onChange={(e) => setFormData({ ...formData, projectDetails: e.target.value })}
-                  placeholder="What are your goals? What challenges are you facing with your energy drink marketing?"
+                  placeholder="What are your goals? What challenges are you facing with your marketing?"
                   rows={4}
                   className="bg-muted/50"
                 />
-              </div>
-
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-card-foreground mb-2">How did you hear about me?</label>
-                <Select value={formData.referralSource} onValueChange={(v) => setFormData({ ...formData, referralSource: v })}>
-                  <SelectTrigger className="bg-muted/50">
-                    <SelectValue placeholder="Select source" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-card border-border">
-                    {referralSources.map((source) => (
-                      <SelectItem key={source} value={source}>{source}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
               </div>
 
               <Button 
